@@ -36,16 +36,20 @@
                     <div class="col-lg-9 col-md-9 col-sm-9 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><b>Movies Tickets</b></h4>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <form action="{{ url('/searchuser') }}" method="get" style="padding-top: 30px;">
-                                        @csrf
-                                        <x-jet-input type="text" name="searchuser" placeholder="Search"
-                                            style="height:42px; vertical-align:top;" />
-                                        <button type="submit" class="btn"
-                                            style="background-color:#9370DB; width:41px; vertical-align:top; height:42px; margin-top:0px; padding: 8px 12px;"><i
-                                                class="fa fa-search"></i></button>
-                                    </form>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4 class="card-title"><b>Movies Tickets</b></h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex justify-content-end align-items-center">
+                                            <a href="#"
+                                                onclick="window.location.href='{{ route('download.ticketsdata') }}'">
+                                                <x-jet-button class="ml-4"><i
+                                                        class="fa fa-download mr-2"></i>Tickets
+                                                    Data</x-jet-button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <table border="3px" style="margin-left: 0;">
                                     <tr>

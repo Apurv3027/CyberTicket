@@ -58,18 +58,6 @@
                                     </div>
                                 </div>
 
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <form action="{{ url('/searchuser') }}" method="get" style="padding-top: 30px;">
-                                        @csrf
-                                        <x-jet-input type="text" name="searchuser" placeholder="Search"
-                                            style="height:42px; vertical-align:top;" />
-                                        <button type="submit" class="btn"
-                                            style="background-color:#9370DB; width:41px; vertical-align:top; height:42px; margin-top:0px; padding: 8px 12px;"><i
-                                                class="fa fa-search"></i></button>
-                                    </form>
-                                </div>
-
                                 <table border="3px" style="margin-left: 0;">
                                     <tr>
                                         <th style="padding: 20px">Name</th>
