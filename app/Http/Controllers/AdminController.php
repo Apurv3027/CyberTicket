@@ -37,11 +37,33 @@ class AdminController extends Controller
         $data->total_multiplex = Multiplex::multiplexCount();
         $data->total_screen = Screen::screenCount();
         $data->total_movie_show = MovieShow::movieShowCount();
-        $ticketData = MovieShow::select('movieid', DB::raw('COUNT(*) as ticket_count'))->groupBy('movieid')->with('getMovie:id,moviename')->get();
-        $movieIds = $ticketData->pluck('movieid');
-        $data->movieNames = Movie::whereIn('id', $movieIds)->pluck('moviename');
-        $data->ticketCounts = $ticketData->pluck('ticket_count');
-        return view('admin.admindashboard', ['data' => $data, 'ticketData']);
+
+        // Movie Analytics
+        $ticketPurchases = Ticket::select('movie_name', DB::raw('COUNT(*) as total_tickets'))->groupBy('movie_name')->get();
+
+        // Count (Latest Movies and Upcomming Movies)
+        $latestMovieCount = Movie::count();
+        $upcomingMovieCount = Upcoming::count();
+
+        // Fetch multiplex names and their counts
+        // $multiplex = Multiplex::select('name', 'totalscreen')->get();
+
+        // Fetch multiplex names and their counts
+        $multiplexData = Multiplex::select('name', 'totalscreen')->get();
+
+        // Extract the names and counts into separate arrays
+        $multiplexNames = $multiplexData->pluck('name')->toArray();
+        $multiplexScreenCounts = $multiplexData->pluck('totalscreen')->toArray();
+
+        return view('admin.admindashboard', [
+            'data' => $data,
+            'ticketPurchases' => $ticketPurchases,
+            'latestMovieCount' => $latestMovieCount,
+            'upcomingMovieCount' => $upcomingMovieCount,
+            // 'multiplex' => $multiplex,
+            'multiplexNames' => $multiplexNames,
+            'multiplexScreenCounts' => $multiplexScreenCounts,
+        ]);
     }
 
     public function adminuser()

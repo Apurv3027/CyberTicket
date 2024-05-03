@@ -13,6 +13,11 @@ class MovieShow extends Model
 {
     use HasFactory;
 
+    public function movie()
+    {
+        return $this->belongsTo(Movie::class, 'movieid');
+    }
+
     public function getMovie()
     {
         return $this->belongsTo('App\Models\Movie','movieid','id');

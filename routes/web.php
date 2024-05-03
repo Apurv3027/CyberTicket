@@ -16,6 +16,8 @@ use App\Http\Controllers\PaymentController;
 
 use App\Http\Controllers\DownloadController;
 
+use App\Http\Controllers\AnalyticsController;
+
 
 
 /*
@@ -88,6 +90,8 @@ Route::get('/download-screen-data', [AdminController::class,"downloadScreenData"
 Route::get('/download-movie-show-data', [AdminController::class,"downloadMovieShowData"])->name('download.movieshowdata');
 
 Route::get('/download-tickets-data', [AdminController::class,"downloadTicketsData"])->name('download.ticketsdata');
+
+Route::get('/analytics', [AnalyticsController::class, "showAnalytics"])->name('analytics');
 
 route::get('/searchuser',[AdminController::class,"searchuser"]);
 
