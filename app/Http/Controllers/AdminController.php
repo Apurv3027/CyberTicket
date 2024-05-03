@@ -37,10 +37,7 @@ class AdminController extends Controller
         $data->total_multiplex = Multiplex::multiplexCount();
         $data->total_screen = Screen::screenCount();
         $data->total_movie_show = MovieShow::movieShowCount();
-        $ticketData = MovieShow::select('movieid', DB::raw('COUNT(*) as ticket_count'))
-            ->groupBy('movieid')
-            ->with('getMovie:id,moviename')
-            ->get();
+        $ticketData = MovieShow::select('movieid', DB::raw('COUNT(*) as ticket_count'))->groupBy('movieid')->with('getMovie:id,moviename')->get();
         $movieIds = $ticketData->pluck('movieid');
         $data->movieNames = Movie::whereIn('id', $movieIds)->pluck('moviename');
         $data->ticketCounts = $ticketData->pluck('ticket_count');
@@ -308,6 +305,47 @@ class AdminController extends Controller
 
         // Output PDF to browser
         $pdf->stream('MovieShowData.pdf');
+    }
+
+    public function downloadTicketsData()
+    {
+        $data = Ticket::all();
+
+        $pdf = new Dompdf();
+
+        $num = 0;
+
+        // Prepare HTML content with table and borders
+        $html = '<h1>Tickets Data</h1><table style="border-collapse: collapse; width: 100%;">';
+        $html .= '<thead><tr><th style="border: 1px solid #000;">#</th><th style="border: 1px solid #000;">User Name</th><th style="border: 1px solid #000;">Show Name</th>';
+        $html .= '<th style="border: 1px solid #000;">Seats</th><th style="border: 1px solid #000;">Booking Date</th><th style="border: 1px solid #000;">Amount</th><th style="border: 1px solid #000;">Transaction</th></tr></thead><tbody>';
+
+        // Generate table rows for each user
+        foreach ($data as $ticket) {
+            $num++;
+
+            $html .= '<tr><td style="border: 1px solid #000;">' . $num . '</td>';
+            $html .= '<td style="border: 1px solid #000;">' . $ticket->user_name . '</td>';
+            $html .= '<td style="border: 1px solid #000;">' . $ticket->movie_name . '</td>';
+            $html .= '<td style="border: 1px solid #000;">' . $ticket->totalseats . '</td>';
+            $html .= '<td style="border: 1px solid #000;">' . $ticket->bookingdate . '</td>';
+            $html .= '<td style="border: 1px solid #000;">' . $ticket->totalpay . '</td>';
+            $html .= '<td style="border: 1px solid #000;">' . $ticket->Completed . '</td></tr>';
+        }
+
+        $html .= '</tbody></table>';
+
+        // Load HTML content into Dompdf
+        $pdf->loadHtml($html);
+
+        // Set paper size and orientation
+        $pdf->setPaper('A4', 'landscape');
+
+        // Render PDF
+        $pdf->render();
+
+        // Output PDF to browser
+        $pdf->stream('TicketsData.pdf');
     }
 
     public function adminmovies()

@@ -87,6 +87,8 @@ Route::get('/download-screen-data', [AdminController::class,"downloadScreenData"
 
 Route::get('/download-movie-show-data', [AdminController::class,"downloadMovieShowData"])->name('download.movieshowdata');
 
+Route::get('/download-tickets-data', [AdminController::class,"downloadTicketsData"])->name('download.ticketsdata');
+
 route::get('/searchuser',[AdminController::class,"searchuser"]);
 
 route::get('/admindashboard',[AdminController::class,"admindashboard"]);
