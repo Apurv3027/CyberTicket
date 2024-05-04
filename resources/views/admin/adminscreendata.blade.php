@@ -36,7 +36,7 @@
             @include('admin.navbar')
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8 grid-margin stretch-card">
+                    <div class="col-lg-9 col-md-9 col-sm-9 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
@@ -60,6 +60,7 @@
                                 </div>
                                 <table border="3px" style="margin-left: 0;">
                                     <tr>
+                                        <th style="padding: 20px">#</th>
                                         <th style="padding: 20px">Multiplex Name</th>
                                         <th style="padding: 20px">Screen No.</th>
                                         <th style="padding: 20px">Screen Name</th>
@@ -67,8 +68,9 @@
                                         <th style="padding: 20px;text-align: center;">Update</th>
                                     </tr>
 
-                                    @foreach ($datas as $datas)
+                                    @foreach ($datas as $index => $datas)
                                         <tr>
+                                            <td style="padding: 20px">{{ $index + 1 }}</td>
                                             <td style="padding: 20px">{{ $datas->getMultiplex->name }}</td>
                                             <td style="padding: 20px">{{ $datas->screenno }}</td>
                                             <td style="padding: 20px">{{ $datas->screenname }}</td>

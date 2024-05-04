@@ -60,13 +60,15 @@
                                 </div>
                                 <table style="margin-left: auto;margin-right: auto;">
                                     <tr>
+                                        <th style="padding: 20px">#</th>
                                         <th style="padding: 20px">Name</th>
                                         <th style="padding: 20px">Release Date</th>
                                         <th style="padding: 20px;text-align: center;">Delete</th>
                                         <th style="padding: 20px;text-align: center;">Update</th>
                                     </tr>
-                                    @foreach ($data as $data)
+                                    @foreach ($data as $index => $data)
                                         <tr>
+                                            <td style="padding: 20px">{{ $index + 1 }}</td>
                                             <td style="padding: 20px">{{ $data->moviename }}</td>
                                             <td style="padding: 20px">{{ $data->releasedate }}</td>
                                             <td style="padding: 20px"><a

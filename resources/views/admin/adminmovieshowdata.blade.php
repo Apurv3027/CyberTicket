@@ -35,7 +35,7 @@
             @include('admin.navbar')
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col-lg-11 col-md-11 col-sm-11 grid-margin stretch-card">
+                    <div class="col-lg-12 col-md-12 col-sm-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
@@ -60,6 +60,7 @@
                                 </div>
                                 <table border="3px" style="margin-left: 0;">
                                     <tr>
+                                        <th style="padding: 20px">#</th>
                                         <th style="padding: 20px">Movie Name</th>
                                         <th style="padding: 20px">Multiplex Name</th>
                                         <th style="padding: 20px">Screen No.</th>
@@ -68,8 +69,9 @@
                                         <th style="padding: 20px;text-align: center;">Delete</th>
                                         <th style="padding: 20px;text-align: center;">Update</th>
                                     </tr>
-                                    @foreach ($datams as $datams)
+                                    @foreach ($datams as $index => $datams)
                                         <tr>
+                                            <td style="padding: 20px">{{ $index + 1 }}</td>
                                             <td style="padding: 20px">{{ $datams->getMovie->moviename }}</td>
                                             <td style="padding: 20px">{{ $datams->getMultiplex->name }}</td>
                                             <td style="padding: 20px">{{ $datams->getScreen->screenname }}</td>

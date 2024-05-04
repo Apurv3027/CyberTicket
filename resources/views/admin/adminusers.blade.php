@@ -13,7 +13,7 @@
 
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+                    <div class="col-lg-7 col-md-7 col-sm-7 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
 
@@ -44,6 +44,7 @@
                                 <table border="3px" style="margin-left: 0;">
 
                                     <tr>
+                                        <th style="padding: 20px;">#</th>
                                         <th style="padding: 20px;">Name</th>
                                         <th style="padding: 20px">Email</th>
                                         <th style="padding: 20px">Phone</th>
@@ -51,8 +52,9 @@
                                         <th style="padding: 20px;text-align: center;">Delete</th>
                                     </tr>
 
-                                    @forelse($data as $data)
+                                    @forelse($data as $index => $data)
                                         <tr>
+                                            <td style="padding: 20px">{{ $index }}</td>
                                             <td style="padding: 20px">{{ $data->name }}</td>
                                             <td style="padding: 20px">{{ $data->email }}</td>
                                             <td style="padding: 20px">{{ $data->phone }}</td>

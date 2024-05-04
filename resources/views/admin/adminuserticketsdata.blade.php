@@ -62,9 +62,9 @@
                                         <th style="padding: 20px;">Transaction</th>
                                     </tr>
                                     @if (!empty($userTickets))
-                                        @foreach ($userTickets as $key => $value)
+                                        @foreach ($userTickets as $index => $value)
                                             <tr>
-                                                <td>{{ $key + 1 }}</td>
+                                                <td>{{ $index + 1 }}</td>
                                                 <td>{{ $value['user_name'] }}</td>
                                                 <td>{{ $value['movie_name'] }}</td>
                                                 <td>{{ $value['totalseats'] }}</td>
