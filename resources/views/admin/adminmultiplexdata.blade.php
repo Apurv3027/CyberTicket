@@ -34,7 +34,7 @@
             @include('admin.navbar')
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col-lg-7 col-md-7 col-sm-7 grid-margin stretch-card">
+                    <div class="col-lg-8 col-md-8 col-sm-8 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
@@ -60,13 +60,15 @@
 
                                 <table border="3px" style="margin-left: 0;">
                                     <tr>
+                                        <th style="padding: 20px">#</th>
                                         <th style="padding: 20px">Name</th>
                                         <th style="padding: 20px">Total Screen</th>
                                         <th style="padding: 20px;text-align: center;">Delete</th>
                                         <th style="padding: 20px;text-align: center;">Update</th>
                                     </tr>
-                                    @foreach ($data as $data)
+                                    @foreach ($data as $index => $data)
                                         <tr>
+                                            <td style="padding: 20px">{{ $index + 1 }}</td>
                                             <td style="padding: 20px">{{ $data->name }}</td>
                                             <td style="padding: 20px">{{ $data->totalscreen }}</td>
                                             <td style="padding: 20px"><a href="{{ url('/deletemultiplex', $data->id) }}"

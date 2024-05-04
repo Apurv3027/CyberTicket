@@ -195,7 +195,7 @@
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ['Latest Movies', 'Upcoming Movies'],
+                labels: ['Live Movies', 'Upcoming Movies'],
                 datasets: [{
                     label: 'Movie Type',
                     data: [latestMovieCount, upcomingMovieCount],
