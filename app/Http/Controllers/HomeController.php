@@ -42,7 +42,7 @@ class HomeController extends Controller
         return view("movies",compact("data","datau"));
     }
 
-    public function upcomingmovies()    
+    public function upcomingmovies()
     {
         $datam=upcoming::orderBy('id', 'DESC')->get();
         $datau=user::all();
@@ -66,7 +66,7 @@ class HomeController extends Controller
         $id=Auth::user()->id;
         $data = new contactus;
 
-        $data->userid = $id;           
+        $data->userid = $id;
         $data->fullname = $request->fullname;
         $data->email = $request->email;
         $data->subject = $request->subject;
@@ -149,7 +149,7 @@ class HomeController extends Controller
                 // return view('admin.admindashboard');
                 return redirect('/admindashboard');
             }
-            else 
+            else
             {
                 return view("home",compact("data","datam"));
             }
