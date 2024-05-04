@@ -252,6 +252,26 @@
         gradient5.addColorStop(0, 'rgba(63, 94, 251, 1)');
         gradient5.addColorStop(1, 'rgba(252, 70, 107, 1)');
 
+        var gradient6 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient6.addColorStop(0, 'rgba(252, 70, 107, 1)');
+        gradient6.addColorStop(1, 'rgba(63, 94, 251, 1)');
+
+        var gradient7 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient7.addColorStop(0, 'rgba(253, 187, 45, 1)');
+        gradient7.addColorStop(1, 'rgba(34, 193, 195, 1)');
+
+        var gradient8 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient8.addColorStop(0, 'rgba(148, 187, 233, 1)');
+        gradient8.addColorStop(1, 'rgba(238, 174, 202, 1)');
+
+        var gradient9 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient9.addColorStop(0, 'rgba(252, 176, 69, 1)');
+        gradient9.addColorStop(1, 'rgba(131, 58, 180, 1)');
+
+        var gradient10 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient10.addColorStop(0, 'rgba(9, 9, 121, 1)');
+        gradient10.addColorStop(1, 'rgba(9, 9, 121, 1)');
+
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
@@ -265,6 +285,11 @@
                         gradient3,
                         gradient4,
                         gradient5,
+                        gradient6,
+                        gradient7,
+                        gradient8,
+                        gradient9,
+                        gradient10,
                     ],
                     borderColor: [
                         gradient,
@@ -272,6 +297,11 @@
                         gradient3,
                         gradient4,
                         gradient5,
+                        gradient6,
+                        gradient7,
+                        gradient8,
+                        gradient9,
+                        gradient10,
                     ],
                     borderWidth: 1
                 }]
