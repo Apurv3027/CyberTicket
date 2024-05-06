@@ -726,7 +726,12 @@ class AdminController extends Controller
             $data->genre = $request->genre;
             $data->type = $request->type;
             $data->length = $request->length;
-            $data->trailerlink = $request->trailerlink;
+
+            // Extract video ID from the YouTube URL
+            $videoId = $this->extractVideoId($request->trailerlink);
+            // Update trailer link to the embed format
+            $data->trailerlink = "https://www.youtube.com/embed/$videoId";
+
             $data->slug = $request->slug;
             $data->rating = $request->rating;
             $data->cast = $request->cast;
@@ -737,6 +742,18 @@ class AdminController extends Controller
             $data->save();
             return redirect()->back();
         }
+    }
+
+    // Helper function to extract video ID from YouTube URL
+    private function extractVideoId($url)
+    {
+        $videoId = '';
+        $pattern = '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i';
+        preg_match($pattern, $url, $matches);
+        if (isset($matches[1])) {
+            $videoId = $matches[1];
+        }
+        return $videoId;
     }
 
     public function uploadupcomingmovies(Request $request)
@@ -756,7 +773,12 @@ class AdminController extends Controller
             $data->releasedate = $request->releasedate;
             $data->genre = $request->genre;
             $data->type = $request->type;
-            $data->trailerlink = $request->trailerlink;
+
+            // Extract video ID from the YouTube URL
+            $videoId = $this->extractVideoId($request->trailerlink);
+            // Update trailer link to the embed format
+            $data->trailerlink = "https://www.youtube.com/embed/$videoId";
+
             $data->slug = $request->slug;
             $data->cast = $request->cast;
             $data->lang = $request->lang;
