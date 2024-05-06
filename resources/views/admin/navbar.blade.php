@@ -39,7 +39,7 @@
                 <span class="menu-title">Tickets</span>
             </a>
         </li>
-        <li class="nav-item menu-items {{ request()->is('adminmoviesdata') || request()->is('adminmovies') ? 'active' : '' }}">
+        <li class="nav-item menu-items {{ request()->is('adminmoviesdata') || request()->is('adminmovies') || request()->is('updatemovie/*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('/adminmoviesdata') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
@@ -47,7 +47,7 @@
                 <span class="menu-title">Current Movies</span>
             </a>
         </li>
-        <li class="nav-item menu-items {{ request()->is('adminupcomingmoviesdata') || request()->is('adminupcomingmovies') ? 'active' : '' }}">
+        <li class="nav-item menu-items {{ request()->is('adminupcomingmoviesdata') || request()->is('adminupcomingmovies') || request()->is('updateupcomingmovie/*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('/adminupcomingmoviesdata') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
@@ -55,7 +55,7 @@
                 <span class="menu-title">Upcoming Movies</span>
             </a>
         </li>
-        <li class="nav-item menu-items {{ request()->is('adminmultiplexdata') || request()->is('adminmultiplex') ? 'active' : '' }}">
+        <li class="nav-item menu-items {{ request()->is('adminmultiplexdata') || request()->is('adminmultiplex') || request()->is('updatemultiplex/*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('/adminmultiplexdata') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
@@ -63,7 +63,7 @@
                 <span class="menu-title">Multiplex</span>
             </a>
         </li>
-        <li class="nav-item menu-items {{ request()->is('adminscreendata') || request()->is('adminscreen') ? 'active' : '' }}">
+        <li class="nav-item menu-items {{ request()->is('adminscreendata') || request()->is('adminscreen') || request()->is('updatescreen/*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('/adminscreendata') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
@@ -71,7 +71,7 @@
                 <span class="menu-title">Screen</span>
             </a>
         </li>
-        <li class="nav-item menu-items {{ request()->is('adminmovieshowdata') || request()->is('adminmovieshow') ? 'active' : '' }}">
+        <li class="nav-item menu-items {{ request()->is('adminmovieshowdata') || request()->is('adminmovieshow') || request()->is('updatemovieshow/*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('/adminmovieshowdata') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
