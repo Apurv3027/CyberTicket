@@ -75,7 +75,10 @@
                                             <td style="padding: 20px">{{ $datams->getMovie->moviename }}</td>
                                             <td style="padding: 20px">{{ $datams->getMultiplex->name }}</td>
                                             <td style="padding: 20px">{{ $datams->getScreen->screenname }}</td>
-                                            <td style="padding: 20px">{{ $datams->showdate }} {{ $datams->showtime }}
+                                            <td style="padding: 20px">
+                                                {{ \Carbon\Carbon::parse($datams->showdate)->format('d/m/Y') }}
+                                                {{ \Carbon\Carbon::createFromFormat('H:i:s', $datams->showtime)->format('h:i A') }}
+                                            </td>
                                             </td>
                                             <td style="padding: 20px"><a
                                                     href="{{ url('/deletemovieshow', $datams->id) }}"

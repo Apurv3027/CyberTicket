@@ -52,8 +52,11 @@
                                                     {{ __('Add') }}
                                                 </x-jet-button>
                                             </a>
-                                            <a href="#" onclick="window.location.href='{{ route('download.upcommingmoviedata') }}'">
-                                                <x-jet-button class="ml-4"><i class="fa fa-download mr-2"></i>Upcomming Movie Data</x-jet-button>
+                                            <a href="#"
+                                                onclick="window.location.href='{{ route('download.upcommingmoviedata') }}'">
+                                                <x-jet-button class="ml-4"><i
+                                                        class="fa fa-download mr-2"></i>Upcomming Movie
+                                                    Data</x-jet-button>
                                             </a>
                                         </div>
                                     </div>
@@ -70,7 +73,9 @@
                                         <tr>
                                             <td style="padding: 20px">{{ $index + 1 }}</td>
                                             <td style="padding: 20px">{{ $data->moviename }}</td>
-                                            <td style="padding: 20px">{{ $data->releasedate }}</td>
+                                            <td style="padding: 20px">
+                                                {{ \Carbon\Carbon::parse($data->releasedate)->format('d/m/Y') }}
+                                            </td>
                                             <td style="padding: 20px"><a
                                                     href="{{ url('/deleteupcomingmovie', $data->id) }}"
                                                     class = "button delete-confirm"><button data-toggle="modal"

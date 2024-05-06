@@ -67,7 +67,9 @@
                                         <tr>
                                             <td style="padding: 20px">{{ $index + 1 }}</td>
                                             <td style="padding: 20px">{{ $data->moviename }}</td>
-                                            <td style="padding: 20px">{{ $data->releasedate }}</td>
+                                            <td style="padding: 20px">
+                                                {{ \Carbon\Carbon::parse($data->releasedate)->format('d/m/Y') }}
+                                            </td>
                                             <td style="padding: 20px">{{ $data->length }}</td>
                                             <td style="padding: 20px"><a href="{{ url('/deletemovie', $data->id) }}"
                                                     class = "button delete-confirm"><button data-toggle="modal"
