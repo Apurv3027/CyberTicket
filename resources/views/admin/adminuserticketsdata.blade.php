@@ -68,7 +68,9 @@
                                                 <td>{{ $value['user_name'] }}</td>
                                                 <td>{{ $value['movie_name'] }}</td>
                                                 <td>{{ $value['totalseats'] }}</td>
-                                                <td>{{ $value['bookingdate'] }}</td>
+                                                <td style="padding: 20px">
+                                                    {{ \Carbon\Carbon::parse($value['bookingdate'])->format('d/m/Y') }}
+                                                </td>
                                                 <td>Rs. {{ $value['totalpay'] }}</td>
                                                 <td>{{ $value['Completed'] }}</td>
                                             </tr>
