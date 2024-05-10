@@ -42,14 +42,14 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2> <em>CYBER TICKETS</em></h2></a>
+          <a class="navbar-brand" href="{{url('/')}}"><h2> <em>CYBER TICKETZ</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -83,19 +83,19 @@ https://templatemo.com/tm-546-sixteen-clothing
               </li>
               @endif
             </ul>
-          </div> 
+          </div>
         </div>
       </nav>
     </header>
 
-    <div class="banner header-text">      
+    <div class="banner header-text">
 </div>
 
 
 <!-- Content -->
 
         <div class="container" style="padding-top:60px;">
-            <div class="row"> 
+            <div class="row">
                 <div class="col-md-3">
                     <div class="product-item" style="border-radius:10px; border: 3px solid #010101; margin-bottom: 20px;">
                         <img src="{{ asset('moviesimage/'. $movies->image) }}" alt="" style="width: 206px; height: 286px; overflow: hidden; border-radius: 10px;">
@@ -110,17 +110,17 @@ https://templatemo.com/tm-546-sixteen-clothing
                             <h2 style="margin-top:15px; margin-left:15px; border-radius:5px; padding: 7px; font-size: 20px;">{{$movies->lang}}</h2>
                         </div>
                         <div class="row">
-                            <h2 style="margin-top:15px; margin-left:10px; border-radius:5px; padding: 7px; font-size: 20px;">{{$movies->genre}}</h2>        
+                            <h2 style="margin-top:15px; margin-left:10px; border-radius:5px; padding: 7px; font-size: 20px;">{{$movies->genre}}</h2>
                         </div>
                         <div class="row">
                             <h2 style="margin-top:15px; margin-left:10px; border-radius:5px; padding: 7px; font-size: 20px;">{{  date("d M, Y", strtotime($movies->releasedate))}}</h2>
                         </div>
                         <div>
-                            <a style="color:white; border-color:#9370DB;" href="{{url('upcomingmovies/'.$movies->slug.'/'.$movies->id.'/trailer')}}"><button style="margin-top:15px; margin-left:0px; outline: none; font-color:#dfscds; border-radius:5px; padding: 7px; font-size: 20px; color:#ffffff; border : 0px; font-family:Nunito, ui-sans-serif, system-ui; background-color:#9370DB;"><b>Watch Trailer</b></Button></a>  
+                            <a style="color:white; border-color:#9370DB;" href="{{url('upcomingmovies/'.$movies->slug.'/'.$movies->id.'/trailer')}}"><button style="margin-top:15px; margin-left:0px; outline: none; font-color:#dfscds; border-radius:5px; padding: 7px; font-size: 20px; color:#ffffff; border : 0px; font-family:Nunito, ui-sans-serif, system-ui; background-color:#9370DB;"><b>Watch Trailer</b></Button></a>
                         </div>
-                    </div> 
+                    </div>
                 </div>
-            </div> 
+            </div>
             <div>
                     <h2 style="margin-top:5px; margin-left:25px; border-radius:5px; padding: 7px; font-size: 25px;">About The Movie</h2>
                     <h2 style="color:#DEDEDE; margin-top:5px; margin-left:25px; border-radius:5px; padding: 7px; font-size: 20px;">{{$movies->description}}</h2>
@@ -129,7 +129,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     <h2 style="margin-top:20px; margin-left:25px; border-radius:5px; padding: 7px; font-size: 25px;">Cast</h2>
                     <h2 style="color:#DEDEDE; margin-top:5px; margin-left:25px; border-radius:5px; padding: 7px; font-size: 20px;">{{$movies->cast}}</h2>
             </div>
-        </div>  
+        </div>
 
 
 	<footer>
@@ -138,15 +138,15 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <div class="col-lg-4 col-xs-12"></div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a class="navbar-brand" href="{{url('/')}}"><h2><em>Cyber Tickets</em></h2></a>
+                        <a class="navbar-brand" href="{{url('/')}}"><h2><em>CYBER TICKETZ</em></h2></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12"></div>
             </div>
         </div>
     </footer>
-    
-    
+
+
 
 
     <!-- Bootstrap core JavaScript -->
@@ -162,7 +162,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <script src="assets/js/accordions.js"></script>
 
 
-    <script language = "text/Javascript"> 
+    <script language = "text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the
       if(! cleared[t.id]){                      // function makes it static and global
