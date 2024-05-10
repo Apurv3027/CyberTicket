@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>CYBER TICKETS</title>
+    <title>CYBER TICKETZ</title>
 
     <!-- Bootstrap core CSS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -43,14 +43,14 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2><em>CYBER TICKETS</em></h2></a>
+          <a class="navbar-brand" href="{{url('/')}}"><h2><em>CYBER TICKETZ</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -65,7 +65,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{url('/search')}}">Search</a>
-              </li>        
+              </li>
               @if(Auth::check())
                 @if(Auth::user()->role=='1')
                 <li class="nav-item">
@@ -84,12 +84,12 @@ https://templatemo.com/tm-546-sixteen-clothing
               </li>
               @endif
             </ul>
-          </div> 
+          </div>
         </div>
       </nav>
     </header>
 
-    <div class="banner header-text">      
+    <div class="banner header-text">
     </div>
 
 
@@ -107,13 +107,13 @@ https://templatemo.com/tm-546-sixteen-clothing
                             <div class="mt-4" style="margin-top:50px; margin-left:0px;">
                                 <input type="hidden" id="seatnamevalue" name="seatnamevalue" value="{{$tickets->seatnames}}"/>
                                 <h1 class="block text-sm text-gray-700" style="font-size:22px; font-weight:bolder; margin-bottom:5px;">{{$datams->getMovie->moviename}}</h1>
-                            </div> 
+                            </div>
                             <div class="row" style="margin-top:10px; margin-left:0px;">
                                 <h2 class="block text-sm text-gray-700" style="font-size:16px; font-weight:; margin-right:10px;" id="screenname">{{$datams->getMovie->rating}}</h2>
                                 <h2 class="block text-sm text-gray-700" style="font-size:16px; font-weight:; margin-right:10px;" id="screenname">{{$datams->showlang}}</h2>
                                 <h2 class="block text-sm text-gray-700" style="font-size:16px; font-weight:; margin-right:10px;" id="screenname">{{$datams->getMovie->length}}</h2>
                                 <h2 class="block text-sm text-gray-700" style="font-size:16px; font-weight:; " id="screenname">{{$datams->showtype}}</h2>
-                            </div> 
+                            </div>
 
                             <div class="row" style="margin-top:20px; margin-left:0px;">
                                 <h2 class="block text-sm text-gray-700" style="font-size:18px; font-weight:; margin-right:10px;" id="screenname">{{$datams->getMultiplex->name}}</h2>
@@ -122,7 +122,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                             <div class="row" style="margin-top:20px; margin-left:0px;">
                                 <h2 class="block text-sm text-gray-700" style="font-size:16px; font-weight:; margin-right:10px;" id="screenname">{{  date("l, d M", strtotime($datams->showdate))}}</h2>
                             </div>
-                            <div class="row" style="margin-top:10px; margin-left:0px;">  
+                            <div class="row" style="margin-top:10px; margin-left:0px;">
                                 <h2 class="block text-sm text-gray-700" style="font-size:18px; font-weight:bolder; margin-right:10px;" id="screenname">{{  date("g:i A", strtotime($datams->showtime))}}</h2>
                             </div>
                         </div>
@@ -135,35 +135,35 @@ https://templatemo.com/tm-546-sixteen-clothing
                     <div>
                     <center><h2 class="block text-sm text-gray-700" style="font-size:16px; font-weight:;" id="screenname">- - - - - - - SCAN QR CODE AT CINEMA - - - - - - -</h2></center>
                     </div>
-                    
+
                     <div class="row" style="margin-right:20px; margin-left:20px;">
                         <div class="col-sm-8">
                             <div class="mt-4" style="margin-top:20px; margin-left:0px;">
                                 <h1 class="block text-sm text-gray-700" style="font-size:16px; margin-right:300px; margin-bottom:5px; font-weight:bolder;">SCREEN</h2>
                                 <h2 class="block text-sm text-gray-700" style="font-size:18px; font-weight:bolder; " id="screenname">{{$datams->getScreen->screenname}}</h2>
-                            </div> 
+                            </div>
                             <div class="mt-4" style="margin-top:50px; margin-left:0px;">
                                 <h1 class="block text-sm text-gray-700" style="font-size:16px; font-weight:bolder; margin-bottom:5px;">Seats</h1>
                                 <h2 class="block text-sm text-gray-700" style="font-size:18px; font-weight:bolder;">{{$tickets->seatnames}}</h2>
                                 <h2 class="block text-sm text-gray-700" style="font-size:18px; margin-top:5px; font-weight:bolder;">({{$tickets->totalseats}} Tickets)</h2>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-4" style="margin-right:0px;">
                                 <div class="product-item" style="border-radius:10px; margin-top:25px; border: 3px solid #0C0E10; float:right; margin-bottom: 20px; width: 120px; height: 120px;">
                                 <img src="{{ ('assets/images/QrCode.png') }}" alt="" style="width: 120px; height: 120px; overflow: hidden; border-radius: 10px;">
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="col-sm-3">
             </div>
         </div>
         <div style="margin-left:210px;">
           <a href="{{url('downloadPDF/'.$tickets->id)}}"><i class="fa fa-download" style="margin-right:0px; margin-top:40px; display:block; font-size:36px; color:white;"></i></a>
-        </div>  
+        </div>
     </div>
-    
+
 </div>
 
 
@@ -193,16 +193,16 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <div class="col-lg-4 col-xs-12"></div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a class="navbar-brand" href="{{url('/')}}"><h2><em>Cyber Tickets</em></h2></a>
+                        <a class="navbar-brand" href="{{url('/')}}"><h2><em>CYBER TICKETZ</em></h2></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12"></div>
             </div>
         </div>
     </footer>
-    
-    
-    
+
+
+
 
 
     <!-- Bootstrap core JavaScript -->
@@ -219,7 +219,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <script src="assets/js/paymentdone.js"></script>
 
 
-    <script language = "text/Javascript"> 
+    <script language = "text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the
       if(! cleared[t.id]){                      // function makes it static and global

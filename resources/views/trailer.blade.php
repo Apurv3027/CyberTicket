@@ -53,7 +53,7 @@ https://templatemo.com/tm-546-sixteen-clothing
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <h2><em>CYBER TICKETS</em></h2>
+                    <h2><em>CYBER TICKETZ</em></h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -118,7 +118,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     <div class="col-lg-4">
                         <div class="logo">
                             <a class="navbar-brand" href="{{ url('/') }}">
-                                <h2><em>Cyber Tickets</em></h2>
+                                <h2><em>CYBER TICKETZ</em></h2>
                             </a>
                         </div>
                     </div>

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>CYBER TICKETS</title>
+    <title>CYBER TICKETZ</title>
 
     <!-- Bootstrap core CSS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -49,7 +49,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2><em>CYBER TICKETS</em></h2></a>
+          <a class="navbar-brand" href="{{url('/')}}"><h2><em>CYBER TICKETZ</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -172,7 +172,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <div class="col-lg-4 col-xs-12"></div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a class="navbar-brand" href="{{url('/')}}"><h2><em>Cyber Tickets</em></h2></a>
+                        <a class="navbar-brand" href="{{url('/')}}"><h2><em>CYBER TICKETZ</em></h2></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12"></div>
