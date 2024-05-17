@@ -75,6 +75,9 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <span class="sr-only">(current)</span>
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('/contactus')}}">Contact Us</a>
+              </li>
               @if(Auth::check())
                 @if(Auth::user()->role=='1')
                 <li class="nav-item">

@@ -122,7 +122,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="col-md-6">
             <div class="left-content">
               <h4>Who we are &amp; What we do?</h4>
-              <p>We are TYBCA students of Shri S.V.Patel College Of Computer Science & Business Management.<br><br>Currently We are making Final Project based on Laravel and MySQL.</p>
+              <p>We are MCA students of SCET.<br><br>Currently We are making Project based on Laravel and MySQL.</p>
               <ul class="social-icons">
                     <li><a href="https://www.facebook.com/cybertickets/"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://twitter.com/cybertickets/"><i class="fa fa-twitter"></i></a></li>

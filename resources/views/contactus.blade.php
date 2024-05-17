@@ -57,13 +57,16 @@ https://templatemo.com/tm-546-sixteen-clothing
 
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="{{url('/')}}">Home
-                  <span class="sr-only">(current)</span>
-                </a>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('/')}}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{url('/search')}}">Search</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url('/contactus')}}">Contact Us
+                  <span class="sr-only">(current)</span>
+                </a>
               </li>
               @if(Auth::check())
                 @if(Auth::user()->role=='1')
