@@ -73,7 +73,7 @@
                                         <x-jet-label for="trailerlink" value="{{ __('Trailer Link') }}" />
                                         <x-jet-input id="trailerlink" class="block mt-1 w-full" type="text"
                                             name="trailerlink" :value="old('trailerlink')" required autofocus
-                                            autocomplete="off" />
+                                            autocomplete="off" placeholder="https://www.youtube.com/embed/VIDEO_ID" />
                                     </div>
 
                                     <div class="mt-4">
